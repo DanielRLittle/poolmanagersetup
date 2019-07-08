@@ -1,10 +1,14 @@
-[Unit]
-Description=Api
+Description=api
+
+Wants=network.target
+After=syslog.target network-online.target
 
 [Service]
-User=mongodb
-WorkingDirectory=/home/mongodb
+Type=simple
 ExecStart=~/poolmanager-api/node index.js
+Restart=on-failure
+RestartSec=10
+KillMode=process
 
 [Install]
 WantedBy=multi-user.target

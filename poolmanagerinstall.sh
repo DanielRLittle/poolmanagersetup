@@ -13,4 +13,5 @@ sudo apt install mongodb -y
 git checkout dev
 sudo cp ~/poolmanagersetup/api.service /etc/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable api
 sudo systemctl start api
