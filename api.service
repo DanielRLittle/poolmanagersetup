@@ -4,7 +4,7 @@ Description=Api
 [Service]
 User=mongodb
 WorkingDirectory=/home/mongodb
-ExecStart=/home/mongodb/poolmanager-api/node index.js
+ExecStart=~/poolmanager-api/node index.js
 
 [Install]
 WantedBy=multi-user.target
