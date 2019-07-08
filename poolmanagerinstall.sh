@@ -14,4 +14,4 @@ sudo apt install mongodb -y
 git checkout dev
 cp ~/poolmangersetup/api.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl start jenkins
+sudo systemctl start api
