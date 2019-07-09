@@ -4,8 +4,10 @@ Wants=network.target
 After=syslog.target network-online.target
 
 [Service]
+User=mongo
+WorkingDirectory=/home/mongo/poolmanager-api
 Type=simple
-ExecStart=/usr/bin/node ~/poolmanagersetup/poolmanager-api/index.js
+ExecStart=/usr/bin/node /home/mongo/poolmanager-api/index.js
 Restart=on-failure
 RestartSec=10
 KillMode=process
