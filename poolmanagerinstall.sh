@@ -7,7 +7,8 @@ sudo useradd -m -s /bin/bash mongo
 sudo apt install -y npm git nodejs mongodb
 sudo su - mongo << EOF
 git clone https://github.com/yamileon/poolmanager-api.git
-cd poolmanager-api/ |git checkout dev 
+cd poolmanager-api/
+git checkout dev
 npm install
 EOF
 sudo cp ~/poolmanagersetup/api.service /etc/systemd/system/
