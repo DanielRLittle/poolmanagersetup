@@ -24,6 +24,7 @@ sudo su - mongo << EOF
 git clone https://github.com/yamileon/poolmanage-ui.git
 cd poolmanage-ui/
 git checkout furr-dev2
+npm install
 EOF
 sudo cp ~/poolmanagersetup/ui.service /etc/systemd/system/
 sudo systemctl daemon-reload
