@@ -5,7 +5,7 @@ After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=~/poolmanager-api/node index.js
+ExecStart=/usr/bin/node ~/poolmanagersetup/poolmanager-api/index.js
 Restart=on-failure
 RestartSec=10
 KillMode=process
