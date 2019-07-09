@@ -18,3 +18,15 @@ sudo cp ~/poolmanagersetup/api.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable api
 sudo systemctl start api
+
+sudo npm install -g @angular/cli
+sudo su - mongo << EOF
+git clone https://github.com/yamileon/poolmanage-ui.git
+cd poolmanage-ui/
+git checkout furr-dev2
+EOF
+sudo cp ~/poolmnagersetup/ui.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable ui
+sudo systemctl start ui
+

@@ -1,0 +1,16 @@
+Description=api
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+User=mongo
+WorkingDirectory=/home/mongo/poolmanage-ui
+Type=simple
+ExecStart=/usr/bin/ng s
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
