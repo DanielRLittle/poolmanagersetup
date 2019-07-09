@@ -4,7 +4,10 @@ sudo apt update -y
 sudo apt upgrade -y
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo useradd -m -s /bin/bash mongo
-sudo apt install -y git nodejs npm mongodb
+sudo apt install -y git
+sudo apt install -y nodejs
+sudo apt install -y npm
+sudo apt install -y mongodb
 sudo su - mongo << EOF
 git clone https://github.com/yamileon/poolmanager-api.git
 cd poolmanager-api/
