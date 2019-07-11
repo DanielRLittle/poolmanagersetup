@@ -9,6 +9,7 @@ sudo apt install -y nodejs
 sudo apt install -y npm
 sudo apt install -y mongodb
 sudo su - mongo << EOF
+rm -rf poolmanager-api
 git clone https://github.com/yamileon/poolmanager-api.git
 cd poolmanager-api/
 git checkout dev
@@ -21,6 +22,7 @@ sudo systemctl restart api
 
 yes | sudo npm install -g @angular/cli
 sudo su - mongo << EOF
+rm -rf poolmanage-ui
 git clone https://github.com/yamileon/poolmanage-ui.git
 cd poolmanage-ui/
 git checkout furr-dev2
