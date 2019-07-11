@@ -3,11 +3,11 @@
 sudo apt update -y 
 sudo apt upgrade -y
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo seradd -m -s /bin/bash angular
+sudo seradd -m -s /bin/bash mongo
 sudo apt install -y nodejs
 sudo apt install -y npm
 yes n | sudo npm install -g @angular/cli
-sudo su - angular <<EOF
+sudo su - mongo <<EOF
 rm -rf poolmanage-ui
 git clone https://github.com/yamileon/poolmanage-ui.git
 cd poolmanage-ui/
