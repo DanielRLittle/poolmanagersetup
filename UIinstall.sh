@@ -1,9 +1,10 @@
 #! /bin/bash
 
-sudo apt update -y 
+sudo apt update -y
 sudo apt upgrade -y
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo seradd -m -s /bin/bash mongo
+sudo useradd -m -s /bin/bash mongo
+sudo apt install git -y
 sudo apt install -y nodejs
 sudo apt install -y npm
 yes n | sudo npm install -g @angular/cli
