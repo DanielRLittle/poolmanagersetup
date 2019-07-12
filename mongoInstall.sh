@@ -7,4 +7,4 @@ sudo apt install git -y
 sudo apt install -y mongodb
 sudo chmod 777 /etc/mongodb.conf
 cp ~/poolmanagersetup/mongodb.conf /etc/mongodb.conf
-
+sudo systemctl restart mongodb.service
